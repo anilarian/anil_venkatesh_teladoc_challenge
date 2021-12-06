@@ -1,0 +1,3 @@
+from tdoc_interview_feature.pages.BasePage import BasePage
+from tdoc_interview_feature.pages.MainPage import MainPage
+from tdoc_interview_feature.pages.AddUserPage import AddUserPage

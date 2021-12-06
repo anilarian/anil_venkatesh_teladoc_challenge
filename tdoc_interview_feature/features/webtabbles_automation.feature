@@ -21,8 +21,8 @@ Feature: Automating webtable
       | John   | john   | 444444 |
 
   Scenario Outline: Delete user User and validate user has been deleted
-    Given Launch chrome browser
-    When Webtables page is opened
+    Given Launch browser and navigate to web tables page
+    When Web tables page is opened
     Then Add user f_name: "<f_name>" u_name: "<u_name>" ph_num: "<ph_num>" to the table
     Then Validate the user f_name: "<f_name>" has been added to the table
     Then Delete a User u_name: "<u_name>" from the table

@@ -1,5 +1,6 @@
+"""Main web tables page functional interface."""
 from selenium.webdriver.common.by import By
-from tdoc_interview_feature.pages.BasePage import BasePage
+from pages.BasePage import BasePage
 
 ADD_USER_XPATH = '/html/body/table/thead/tr[2]/td/button'
 F_NAME_XPATH = '/html/body/div[3]/div[2]/form/table/tbody/tr[1]/td[2]/input'
@@ -26,8 +27,7 @@ class MainPage(BasePage):
         data_row = self.find_in_smart_data_table(self.USER_TABLE, value)
         delete_button = data_row[-1].find_elements(By.TAG_NAME, 'button')[0]
         delete_button.click()
-        ok_button = self.driver.find_elements(By.XPATH, OK_BTN_XPATH)[0]
-        ok_button.click()
+        self.do_click((By.XPATH, OK_BTN_XPATH))
 
     def add_user_click(self):
         self.do_click(self.ADD_USER)

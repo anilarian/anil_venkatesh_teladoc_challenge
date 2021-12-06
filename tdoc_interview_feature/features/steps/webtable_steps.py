@@ -1,31 +1,24 @@
-""" Steps needed for web tables automation feature"""
-
-import random
+""" Steps needed for web tables automation feature."""
 
 from behave import *
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
-from tdoc_interview_feature.pages import (
+from pages import (
     AddUserPage,
     MainPage,
 )
 
+WEB_TABLES = 'http://www.way2automation.com/angularjs-protractor/webtables/'
 
+
+# TODO: Use fixtures to setup web driver.
 @given('Launch chrome browser')
 def launch_chrome_browser(context):
-    options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')  # Last I checked this was necessary.
-    context.driver = webdriver.Chrome(chrome_options=options)
+    context.driver = webdriver.Chrome()
 
 
 @when('Web tables page is opened')
 def open_web_page(context):
-    options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')  # Last I checked this was necessary.
-    context.driver = webdriver.Chrome(chrome_options=options)
     context.driver.get(WEB_TABLES)
     context.main_page = MainPage(context.driver)
     context.add_user_page = AddUserPage(context.driver)

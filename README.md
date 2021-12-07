@@ -1,6 +1,6 @@
-# TELADOC CODING CHALLANGE
+# TELADOC CODING CHALLENGE
 
-**Recieved instructions**
+**Received instructions**
 
 Using an automation framework of your choice. 
 
@@ -48,6 +48,6 @@ Share a repository with your coding challenge (You should be able to set up a fr
 * Improve error handling and edge cases.
 * Implement unit tests
 * Improve logging
-* This is the first project where I'm learning to use both behave & selenium for web automation. Will defenitely continue learning more about these tools regardless.
+* This is the first project where I'm learning to use both behave & selenium for web automation. Will definitely continue learning more about these tools regardless.
 
 ## Thank you

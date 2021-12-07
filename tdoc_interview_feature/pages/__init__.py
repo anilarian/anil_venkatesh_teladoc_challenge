@@ -3,3 +3,4 @@
 from pages.BasePage import BasePage
 from pages.MainPage import MainPage
 from pages.AddUserPage import AddUserPage
+from pages import constants
